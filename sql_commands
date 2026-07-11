@@ -1,0 +1,24 @@
+--create the database--
+CREATE DATABASE students;
+
+USE students;
+--creating the table--
+CREATE TABLE students (
+    student_id INT,
+    student_name VARCHAR(100),
+    last_name VARCHAR(50),
+    marks FLOAT
+);
+--to display the table--
+SELECT * FROM students ;
+
+--renaming the table--
+RENAME TABLE students to school;
+RENAME TABLE school to students;
+
+--renaming the columns--
+ALTER TABLE students 
+RENAME COLUMN student_name to name;
+
+--altering the columns--
+ALTER TABLE students MODIFY name VARCHAR (100) AFTER marks;
