@@ -1,0 +1,24 @@
+--entry to table--
+INSERT INTO students VALUES(1,"chitra","shree",90),
+                            (2,"karthik","t",95);
+SELECT * FROM students;
+--we can also specify the tables--
+SELECT last_name,first_name FROM students;
+
+--particularly choosing--
+SELECT * FROM students WHERE 
+students_id=1;
+
+--updating the values--
+UPDATE students SET last_name="gowda",WHERE student_id=1;
+
+--DELETE from table--
+DELETE from students WHERE student_id=1;
+
+--auto coomit--
+SET AUTOCOMMMIT=OFF;
+SELECT * FROM students;
+COMMIT ;
+
+--to return to value --
+ROLLBACK
