@@ -1,0 +1,14 @@
+CREATE DATABASE students;
+USE students;
+CREATE TABLE students(
+name VARCHAR(50),
+reg_no INT 
+);
+ALTER TABLE students
+ALTER reg_no SET default 0;
+INSERT INTO students (name, reg_no)
+VALUES ('chitra', 26);
+
+INSERT INTO students (name)
+VALUES ('karthik');
+SELECT *FROM students;
