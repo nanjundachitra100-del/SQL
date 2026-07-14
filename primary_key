@@ -1,0 +1,10 @@
+CREATE DATABASE students;
+USE students;
+DROP TABLE students;
+CREATE TABLE students(
+	students_id INT PRIMARY KEY auto_increment,
+    amount DECIMAL(5,2)
+    );
+INSERT INTO students (amount)
+VALUES (234.56),(456.34),(145.89),(456.90),(475.76);
+SELECT *FROM students;
