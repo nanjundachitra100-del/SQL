@@ -1,0 +1,27 @@
+CREATE DATABASE students;
+USE students;
+DROP TABLE students;
+CREATE TABLE students(
+	students_id INT PRIMARY KEY auto_increment,
+    amount DECIMAL(5,2)
+    );
+INSERT INTO students (amount)
+VALUES (234.56),(456.34),(145.89),(456.90),(475.76);
+SELECT *FROM students;
+DROP TABLE students;
+CREATE TABLE students(
+	name VARCHAR(100) NOT NULL,
+    student_id INT PRIMARY KEY,
+    age INT CHECK(age>=18),
+    email VARCHAR(100) UNIQUE,
+    marks INT DEFAULT 0
+    );
+SELECT * FROM students;
+ALTER TABLE students MODIFY COLUMN student_id INT auto_increment;
+INSERT INTO students(name,age,email,marks)
+VALUES("chitra",27,"chitra@gmail.com",95),
+	("karthik",28,"karthik@gmail.com",98);
+    
+SELECT * FROM students;
+    
+    
